@@ -31,11 +31,9 @@ public class AndroidTweenManipulator{
      * @param clasz the class to register.
      * @param tweenAccessor the accessor of the class that has been register.
      * @param tweenManager the tweenmanager.
-     * @param attribLimits the attribute limits.
      */
-    public void registerAttributes(Class<?>clasz,TweenAccessor<?> tweenAccessor,TweenManager tweenManager,int attribLimits){
+    public void registerAttributes(Class<?>clasz,TweenAccessor<?> tweenAccessor,TweenManager tweenManager){
         Tween.registerAccessor(clasz, tweenAccessor);
-        Tween.setCombinedAttributesLimit(attribLimits);
         this.tweenManager = tweenManager;
     }
     /**
